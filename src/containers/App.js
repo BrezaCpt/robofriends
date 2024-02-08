@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import CardList from "../components/CardList";
 import SearchBox from '../components/SearchBox';
 import Scroll from '../components/Scroll';
-import ErrorBoundry from "../components/ErrorBoundry";
+import ErrorBoundary from "../components/ErrorBoundary";
 import './App.css';
 
 class App extends Component {
@@ -46,9 +46,9 @@ class App extends Component {
                     <SearchBox searchChange = {this.onSearchChange}/>
                     {/* Allows scrolling of card list component only instead of whole page */}
                     <Scroll>
-                        <ErrorBoundry>
+                        <ErrorBoundary>
                             <CardList robots={filteredRobots} />
-                        </ErrorBoundry>
+                        </ErrorBoundary>
                         
                     </Scroll>
                 </div>
